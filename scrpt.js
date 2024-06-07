@@ -57,3 +57,14 @@ function calcchange(startingMoney , costPerBottel){
     return change;
 }
 console.log("Hello master, here is your "+ shopMilk(5 ,1.3 ) + " change..");
+
+
+////bmi 
+function bmiCalculator (weight , height){
+    var bmiclc = Math.floor(weight/(height*height));
+    return bmiclc;
+}
+
+console.log("your bmi is: "+ bmiCalculator(65,1.8));
+
+
