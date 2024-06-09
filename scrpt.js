@@ -111,3 +111,21 @@ function loveCalculator(){
 }
 alert(loveCalculator());
 
+
+// leap year
+function isLeap(year){
+    if (year%4===0){
+        if (year%100){
+            if (year%400){
+                return "leap year";
+            }else{
+                return "not leap year";
+            }            
+        } else {
+            return "not leap year";
+        }
+    } else {
+        return "not a leap year";
+    }
+}
+isLeap(2000);
