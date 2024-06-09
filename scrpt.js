@@ -129,3 +129,125 @@ function isLeap(year){
     }
 }
 isLeap(2000);
+
+// arrays 
+function allGuest(){
+    var guestList = ["saurabh" , "gopi" , "anmol" , "kesab"];
+    var guestName = prompt("guest name");
+    if (guestList.includes(guestName)){
+        alert("Welcome");
+    } else {
+        alert(" sorry next time");
+    }
+}
+allGuest();
+
+// fizzbuzz normal method
+var output = [];
+var count = 1;
+function fizzBuzz(){
+    if (count %3 ===0 && count% 5 === 0){
+        output.push("FizzBuzz");
+    } 
+    else if (count % 3 === 0){
+        output.push("Fizz");
+    }
+    else if (count % 5 === 0 ){
+        output.push("Buzz");
+    }
+    else {
+        output.push(count)
+    
+    count++;
+    }
+    console.log(output);
+}
+fizzBuzz();
+
+// who buy a lunch today 
+
+function whosPaying(names){
+    var names = ["saurabh" , "gopi" , "anmol" , "kesab"];
+    var numberOfPeople = names.length;
+    var randomPersonPosition = Math.floor(Math.random()*numberOfPeople);
+    var randomPerson = names[randomPersonPosition];
+    return randomPerson + " is going to buy lunch today!";
+}
+console.log(whosPaying());
+
+
+// another way to solve - who buy a lunch today problem
+function names(){
+    var names = ["saurabh" , "gopi" , "anmol" , "kesab"];
+    var randomIndex = Math.floor(Math.random()*names.length);
+    return names[randomIndex] + " to going to buy lunch today!";
+
+}
+alert(names());
+
+// FizzBuzz using whhile looop 
+var output = [];
+var count = 1;
+
+function fizzBuzz(){
+    while (count <= 100){
+        if (count %3 === 0 && count %5 ===0){
+            output.push("fizzBuzz");
+        } else if (count % 3 === 0){
+            output.push("fizz");
+        } else if (count %5 === 0){
+            output.push("buzz");
+        } else{
+            output.push(count);
+        }
+        count++;
+    }
+    console.log(output);
+}
+fizzBuzz();
+
+// 99 beer bottel soltion 
+function beer(){
+
+
+    var numbersOfBottel = 99;
+    while (numbersOfBottel >= 1){
+        var bottelWord ="bottel";
+        if (numbersOfBottel === 1){
+            bottelWord = "bottels";
+        }
+        console.log(numbersOfBottel + " "+bottelWord + "of the beer on the wall");
+        console.log(numbersOfBottel + " "+bottelWord + "of beer");
+        console.log("take one down, pass it around ");
+        numbersOfBottel--;
+        console.log(numbersOfBottel + " "+bottelWord + " of the beer on the wall");
+
+    }
+}
+console.log(beer());
+
+
+// FizzBuzz using for looop 
+var output = [];
+var count = 1;
+
+function fizzBuzz (){
+    for (count = 1 ; count < 101; count++){
+        if (count %3 === 0 && count %5 ===0){
+            output.push("fizzBuzz");
+        }
+        else if (count % 3 === 0){
+            output.push("fizz");
+        }
+        else if (count %5 === 0){
+            output.push("buzz");
+        }
+        else{
+            output.push(count);
+        }
+    }
+    console.log(output);
+}
+fizzBuzz();
+
+
