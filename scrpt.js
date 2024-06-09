@@ -67,4 +67,47 @@ function bmiCalculator (weight , height){
 
 console.log("your bmi is: "+ bmiCalculator(65,1.8));
 
+//random number for dice 
+function randomDiceNumber(){
+    var n = Math.random();
+    console.log(n);
+    n = n*6;
+    n = Math.floor(n) +1;
+    return n;
+}
+console.log("here is a number after dice roll : "+ randomDiceNumber());
+
+
+// love calculator
+var nmaeOfPerson1 = prompt("Enter your name");
+var nameOfPerson2 = prompt("Enter your name");
+function loveCalculator(){
+    var l = Math.random();
+    console.log(l);
+    l = Math.floor(l*100) + 1;
+    return l;
+}
+console.log("Hey, your love calculation result between "+ nmaeOfPerson1 +" and " + nameOfPerson2 + " is : "+ loveCalculator() + "%");
+alert("Hey, your love calculation result between "+ nmaeOfPerson1 +" and " + nameOfPerson2 + " is : "+ loveCalculator() + "%");
+
+// if else condition
+
+//if (loveCalculator === 100){
+//    alert("you are aswesome");
+//} else {
+ //   alert("you are lol");
+//}
+// love score calculator
+var nmaeOfPerson1 = prompt("Enter your name");
+var nameOfPerson2 = prompt("Enter your name");
+function loveCalculator(){
+    var score = Math.random() * 100;
+    score = Math.floor(score) + 1;
+    if (score > 70){
+        alert("Hey, you guys are awesome. your love calculation result between "+ nmaeOfPerson1 +" and " + nameOfPerson2 + " is : "+ score + "%");
+    } else {
+        alert("Hey, your love calculation result between "+ nmaeOfPerson1 +" and " + nameOfPerson2 + " is : "+ score + "%. you guys are just in average..");
+    }
+}
+alert(loveCalculator());
 
