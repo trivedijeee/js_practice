@@ -251,3 +251,69 @@ function fizzBuzz (){
 fizzBuzz();
 
 
+// fibonacci solution 
+function fibonacciGenerator (n) {
+    var output = [];
+        if (n=== 1){
+            output = [0];
+        }else if (n===2) {
+            output = [0 , 1];
+        }else {
+            output = [0 , 1];
+            for (var j = 2; j < n; j++){
+                output.push(output[output.length - 2 ] + output[output.length - 1]);
+            }
+        }
+        return output;
+}
+
+
+
+//random dice game
+var randomNumber1 = Math.floor(Math.random()*6)+1;
+var randomNumber2 = Math.floor(Math.random()*6)+1;
+var randomImageSource1 = "images/dice"+randomNumber1+".png";
+var randomImageSource2 = "images/dice"+randomNumber2+".png";
+document.querySelectorAll("img")[0].setAttribute("src", randomImageSource1);
+document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+
+
+if (randomNumber1 > randomNumber2){
+    document.querySelector("h1").innerHTML = "player 1 Win 💪";
+}
+else if (randomNumber1 === randomNumber2){
+    document.querySelector("h1").innerHTML = "Match Tie ✋"
+}
+else {
+    document.querySelector("h1").innerHTML = "player 2 Win 💪";
+}
+// another method
+
+// function rollDice() {
+//     var dice1 = document.querySelector(".img1");
+//     var dice2 = document.querySelector(".img2");
+//     var resultText = document.querySelector("h1");
+  
+//     // Generate random numbers between 1 and 6
+//     var randomNum1 = Math.floor(Math.random() * 6) + 1;
+//     var randomNum2 = Math.floor(Math.random() * 6) + 1;
+  
+//     // Set the src attribute of img1 and img2 based on random numbers
+//     dice1.setAttribute("src", "images/dice" + randomNum1 + ".png");
+//     dice2.setAttribute("src", "images/dice" + randomNum2 + ".png");
+  
+//     // Determine the winner or if it's a draw
+//     if (randomNum1 > randomNum2) {
+//       resultText.textContent = "Player 1 Wins!";
+//     } else if (randomNum2 > randomNum1) {
+//       resultText.textContent = "Player 2 Wins!";
+//     } else {
+//       resultText.textContent = "It's a Draw!";
+//     }
+//   }
+  
+//   // Call rollDice() function when the page loads
+//   window.onload = function() {
+//     rollDice();
+//   };
+  
